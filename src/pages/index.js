@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import "./gooey.css";
-import "./datavisuals.css";
-import "./photosites.css";
+import "./stylish/gooey.css";
+import "./stylish/datavisuals.css";
+import "./stylish/photosites.css";
+import "./stylish/flowers.css";
+import Flowers from "./lads/Flowers";
 import bust from "../images/tears.jpg";
-
+import movements from "../movements/thisIsHowWeMoveIt"
 class index extends Component {
   state = {
+    biggie: '',
+    color: "hotPink",
     sizeOf: {
       tears: "little",
       ears: "little",
@@ -14,7 +18,8 @@ class index extends Component {
       councils: "little",
       butts: "little",
       trains: "little",
-      choirs: "little"
+      choirs: "little",
+      about: "little"
     },
     elements: [
       "tears",
@@ -24,7 +29,8 @@ class index extends Component {
       "councils",
       "music",
       "plants",
-      "choirs"
+      "choirs",
+      "about"
     ]
   };
 
@@ -34,7 +40,7 @@ class index extends Component {
     this.state.elements.forEach(el => {
       el === bigElement ? (newSizes[el] = "big") : (newSizes[el] = "tiny");
     });
-    this.setState({ sizeOf: newSizes });
+    this.setState({ sizeOf: newSizes, color: "coral", biggie: bigElement });
   }
 
   shrink() {
@@ -42,13 +48,19 @@ class index extends Component {
     this.state.elements.forEach(el => {
       newSizes[el] = "little";
     });
-    this.setState({ sizeOf: newSizes });
+    this.setState({ sizeOf: newSizes, biggie: null });
   }
 
   render() {
+    var blackNwhite = {
+      webkitFilter: "grayscale(100%)"
+    };
     return (
       <div className="big-box">
+        <Flowers />
+
         <section
+
           className={`${this.state.sizeOf.tears}-tears-box`}
           onMouseEnter={() => {
             this.grow("tears");
@@ -56,7 +68,8 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("tears");
           }}
-          style={{ left: this.state.ears ? "400px" : null }}
+          // style={{ left: this.state.ears ? "400px" : null }}
+          style={movements.tears[this.state.biggie]}
         >
           <svg viewBox="0 0 345 220" xmlnsXlink="http://www.w3.org/1999/xlink">
             <defs>
@@ -68,11 +81,13 @@ class index extends Component {
               >
                 <image
                   class="twombly"
+                  style={blackNwhite}
                   xlinkHref={bust}
                   x="-30"
                   y="-30"
                   width="664"
                   height="759"
+                  filter="grayscale(100%)"
                 />
               </pattern>
             </defs>
@@ -87,6 +102,8 @@ class index extends Component {
           </svg>
         </section>
 
+        {/* //////////COUNCILS////////////// */}
+
         <section
           className={`${this.state.sizeOf.councils}-councils-box`}
           onMouseEnter={() => {
@@ -95,16 +112,23 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("councils");
           }}
+          style={movements.councils[this.state.biggie]}
         >
-          <svg
-            viewBox="0 0 180 100"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+          <g
+          // id="fade"
           >
-            <path fill="teal" stroke="coral" strokeWidth="5" />
-          </svg>
+            <svg
+              viewBox="-3 -3 140 60"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <path fill={this.state.color} stroke="coral" strokeWidth="5" />
+            </svg>
+          </g>
         </section>
+
+        {/* ///////////////EARS//////////////////// */}
 
         <section
           className={`${this.state.sizeOf.ears}-ears-box`}
@@ -114,16 +138,19 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("ears");
           }}
+          style={movements.ears[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 286 190"
+            viewBox="0 0 160 100"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="coral" />
+            <path fill="grey" stroke="hotPink" strokeWidth="5" />
           </svg>
         </section>
+
+        {/* ///////////MUSIC/////////////// */}
 
         <section
           className={`${this.state.sizeOf.music}-music-box`}
@@ -134,16 +161,19 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("music");
           }}
+          style={movements.music[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 225 160"
+            viewBox="-4 -4 235 165"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="coral" />
+            <path fill="grey" stroke="hotpink" strokeWidth="10" />
           </svg>
         </section>
+
+        {/* ///////TRAINS/////////// */}
 
         <section
           className={`${this.state.sizeOf.trains}-trains-box`}
@@ -153,9 +183,10 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("trains");
           }}
+          style={movements.trains[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 286 129"
+            viewBox="0 0 159 73"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -164,6 +195,7 @@ class index extends Component {
           </svg>
         </section>
 
+        {/* ////////BUTTS/////////////////////////////// */}
         <section
           className={`${this.state.sizeOf.butts}-butts-box`}
           onMouseEnter={() => {
@@ -172,16 +204,19 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("butts");
           }}
-        >
+          style={movements.butts[this.state.biggie]} >
+
           <svg
             viewBox="0 0 200 111"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="coral" />
+            <path fill="grey" stroke="hotpink" strokeWidth="7" />
           </svg>
         </section>
+
+        {/* ///////PLANTS//////// */}
 
         <section
           className={`${this.state.sizeOf.plants}-plants-box`}
@@ -191,9 +226,10 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("plants");
           }}
+          style={movements.plants[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 200 111"
+            viewBox="0 0 160 111"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -201,6 +237,8 @@ class index extends Component {
             <path fill="coral" />
           </svg>
         </section>
+
+        {/* /////CHOIRS////// */}
 
         <section
           className={`${this.state.sizeOf.choirs}-choirs-box`}
@@ -210,14 +248,39 @@ class index extends Component {
           onMouseLeave={() => {
             this.shrink("choirs");
           }}
+
+          style={movements.choirs[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 200 111"
+            viewBox="-3 -3 132 112"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="DarkSeaGreen" />
+            <path fill="DarkSeaGreen" stroke="gold" strokeWidth="3px" />
+          </svg>
+        </section>
+
+        {/* ////////ABOUT////////// */}
+
+        <section
+          className={`${this.state.sizeOf.about}-about-box`}
+          onMouseEnter={() => {
+            console.log(this.state.sizeOf, "aboutaboutaboutKDKDK");
+            this.grow("about");
+          }}
+          onMouseLeave={() => {
+            this.shrink("about");
+          }}
+          style={movements.about[this.state.biggie]}
+        >
+          <svg
+            viewBox="-4 -4 140 80"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <path fill="grey" stroke="hotpink" strokeWidth="5" />
           </svg>
         </section>
       </div>

@@ -1,4 +1,12 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
+
+
+I'm using gatsby for the first time so leaving this intro readme here but obstensibly this is a gooey GUI site
+
+
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />

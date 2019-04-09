@@ -1,0 +1,100 @@
+
+
+const movements = {
+
+  tears: {
+    tears: { "left": "35%", "top": "70%", "width": "60%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  ears: {
+    tears: { "left": "8%", "top": "60%", "width": "28%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  music: {
+    tears: { "left": "38%", "top": "55%", "width": "22%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  plants: {
+    tears: { "left": "49%", "top": "18%", "width": "32%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  councils: {
+    tears: { "left": "9%", "top": "42%", "width": "38%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  butts: {
+    tears: { "left": "10%", "top": "76%", "width": "25%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  trains: {
+    tears: { "left": "63%", "top": "55%", "width": "35%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  choirs: {
+    tears: { "left": "45%", "top": "38%", "width": "32%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    about: { "left": "20%", "top": "20%", "width": "20%" },
+  },
+  about: {
+    tears: { "left": "15%", "top": "26%", "width": "31%" },
+    ears: { "left": "20%", "top": "20%", "width": "20%" },
+    music: { "left": "20%", "top": "20%", "width": "20%" },
+    plants: { "left": "20%", "top": "20%", "width": "20%" },
+    councils: { "left": "20%", "top": "20%", "width": "20%" },
+    butts: { "left": "20%", "top": "20%", "width": "20%" },
+    trains: { "left": "20%", "top": "20%", "width": "20%" },
+    choirs: { "left": "20%", "top": "20%", "width": "20%" },
+
+  }
+
+};
+
+export default movements;
