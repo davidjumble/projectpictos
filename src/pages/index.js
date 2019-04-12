@@ -3,7 +3,9 @@ import "./stylish/gooey.css";
 import "./stylish/datavisuals.css";
 import "./stylish/photosites.css";
 import "./stylish/flowers.css";
-import Flowers from "./lads/Flowers";
+import "./stylish/smallblobs.css"
+import Flowers from "./smallBlobs/Flowers";
+import SmallBlobs from "./smallBlobs/SmallBlobs";
 import bust from "../images/tears.jpg";
 import movements from "../movements/thisIsHowWeMoveIt"
 class index extends Component {
@@ -57,10 +59,13 @@ class index extends Component {
     };
     return (
       <div className="big-box">
+
+        {/* <SmallBlobs /> */}
         <Flowers />
 
-        <section
+        {/* ///////////////TEARS////////////////////// */}
 
+        <section
           className={`${this.state.sizeOf.tears}-tears-box`}
           onMouseEnter={() => {
             this.grow("tears");
@@ -71,7 +76,7 @@ class index extends Component {
           // style={{ left: this.state.ears ? "400px" : null }}
           style={movements.tears[this.state.biggie]}
         >
-          <svg viewBox="0 0 345 220" xmlnsXlink="http://www.w3.org/1999/xlink">
+          <svg viewBox="-2 -2 345 220" xmlnsXlink="http://www.w3.org/1999/xlink">
             <defs>
               <pattern
                 id="img1"
@@ -80,10 +85,10 @@ class index extends Component {
                 height="650"
               >
                 <image
-                  class="twombly"
+                  className=""
                   style={blackNwhite}
                   xlinkHref={bust}
-                  x="-30"
+                  x="-40"
                   y="-30"
                   width="664"
                   height="759"
@@ -91,14 +96,8 @@ class index extends Component {
                 />
               </pattern>
             </defs>
-            <g
-              id="Page-1"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-            />
-            <path fill="url(#img1)" stroke="coral" strokeWidth="2" />
+
+            <path fill="url(#img1)" stroke="coral" strokeWidth="4" />
           </svg>
         </section>
 
@@ -123,7 +122,7 @@ class index extends Component {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <path fill={this.state.color} stroke="coral" strokeWidth="5" />
+              <path fill={this.state.color} stroke="teal" strokeWidth="4" />
             </svg>
           </g>
         </section>
@@ -141,7 +140,7 @@ class index extends Component {
           style={movements.ears[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 160 100"
+            viewBox="-3 -3 164 107"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -186,12 +185,12 @@ class index extends Component {
           style={movements.trains[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 159 73"
+            viewBox="-3 -3 168 79"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="coral" />
+            <path fill="coral" stroke="teal" strokeWidth="4" />
           </svg>
         </section>
 
@@ -207,7 +206,7 @@ class index extends Component {
           style={movements.butts[this.state.biggie]} >
 
           <svg
-            viewBox="0 0 200 111"
+            viewBox="-3 -3 200 117"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -229,12 +228,12 @@ class index extends Component {
           style={movements.plants[this.state.biggie]}
         >
           <svg
-            viewBox="0 0 160 111"
+            viewBox="-3 -3 165 116"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <path fill="coral" />
+            <path fill="coral" stroke="hotpink" strokeWidth="4" />
           </svg>
         </section>
 
@@ -275,7 +274,7 @@ class index extends Component {
           style={movements.about[this.state.biggie]}
         >
           <svg
-            viewBox="-4 -4 140 80"
+            viewBox="-4 -4 143 83"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
