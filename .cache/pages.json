@@ -1,0 +1,67 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-pages-pictograms-js",
+        "jsonName": "pictograms-c53",
+        "path": "/pictograms/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-about-js",
+        "jsonName": "single-pictos-about-3bc",
+        "path": "/singlePictos/About/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-books-js",
+        "jsonName": "single-pictos-books-3fd",
+        "path": "/singlePictos/Books/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-choirs-js",
+        "jsonName": "single-pictos-choirs-844",
+        "path": "/singlePictos/Choirs/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-ears-js",
+        "jsonName": "single-pictos-ears-218",
+        "path": "/singlePictos/Ears/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-english-js",
+        "jsonName": "single-pictos-english-b45",
+        "path": "/singlePictos/English/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-eye-js",
+        "jsonName": "single-pictos-eye-651",
+        "path": "/singlePictos/Eye/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-free-js",
+        "jsonName": "single-pictos-free-b4b",
+        "path": "/singlePictos/Free/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-gooey-js",
+        "jsonName": "single-pictos-gooey-964",
+        "path": "/singlePictos/Gooey/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-jam-js",
+        "jsonName": "single-pictos-jam-1fc",
+        "path": "/singlePictos/Jam/"
+    },
+    {
+        "componentChunkName": "component---src-pages-single-pictos-planets-js",
+        "jsonName": "single-pictos-planets-363",
+        "path": "/singlePictos/Planets/"
+    }
+]
